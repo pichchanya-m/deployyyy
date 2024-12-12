@@ -2,12 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  root: path.resolve(__dirname, 'frontend'),  // Correct root directory for Vite
+  root: path.resolve(__dirname, 'frontend'),  // Set the root to the frontend folder
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, 'dist'),  // Correct output directory
+    outDir: path.resolve(__dirname, 'dist'),  // Output directory outside of frontend
     emptyOutDir: true,  // Clean up old build files
   },
 });
